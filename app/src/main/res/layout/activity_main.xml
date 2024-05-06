@@ -1,0 +1,195 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/game_name"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:background="#CCCCCC"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/gamer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/gamer"
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/pc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="85dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/pc"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/myImage"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/start" />
+
+    <ImageView
+        android:id="@+id/pcImage"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/start" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myImage"
+        android:layout_marginStart="80dp">
+
+        <RadioButton
+            android:id="@+id/stoneButton"
+            android:tag="0"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stone"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp" />
+
+        <RadioButton
+            android:id="@+id/scissorsButton"
+            android:tag="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scissors"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp" />
+
+        <RadioButton
+            android:id="@+id/paperButton"
+            android:tag="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/paper"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toStartOf="@+id/radioGroup"
+        android:layout_below="@+id/pcImage"
+        android:layout_marginEnd="80dp">
+        <RadioButton
+            android:id="@+id/stoneButtonPC"
+            android:tag="0"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stone"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp" />
+
+        <RadioButton
+            android:id="@+id/scissorsButtonPC"
+            android:tag="1"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scissors"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp" />
+
+        <RadioButton
+            android:id="@+id/paperButtonPC"
+            android:tag="2"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/paper"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp" />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:backgroundTint="#ff9999"
+        android:text="@string/confirm"
+        android:textSize="25sp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/radioGroup">
+    </Button>
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_below="@id/confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/result"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text_result_test"
+        android:layout_below="@id/confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/result_test"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_below="@id/text_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/NULL"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/result_test"
+        android:layout_below="@id/text_result_test"
+        android:layout_toEndOf="@+id/result"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/NULL"
+        android:textSize="20sp"
+        android:textAlignment="textStart"/>
+
+</RelativeLayout>
